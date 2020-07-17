@@ -1,0 +1,35 @@
+﻿@model RecipesBlog.Models.Recipe
+
+@{
+    ViewBag.Title = @Html.DisplayNameFor(model => model.Name);
+}
+
+<div class="jumbotron">
+    <h1>@Html.DisplayFor(model => model.Name)</h1>
+</div>
+
+<div class="row recipe">
+    <div class="col-md-8">
+        <div class="col-md-12">
+            <span class="description">
+                @Html.DisplayFor(model => model.Description)
+            </span>
+            <hr />
+        </div>
+        <div class="ingredients col-md-4">
+            <h4>Ingredients</h4>
+            <ul>
+                <li> @Html.DisplayFor(model => model.Ingredients)</li>
+            </ul>
+        </div>
+        <div class="directions col-md-8">
+            <h4>Directions</h4>
+            <ol>
+                <li>@Html.DisplayFor(model => model.Ingredients)</li>
+            </ol>
+        </div>
+    </div>
+    <div class="col-md-4 text-right">
+        <img class="img img-thumbnail" src="..\..\assets\dessert.jpg" />
+    </div>
+</div>

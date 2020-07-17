@@ -15,12 +15,9 @@ namespace RecipesBlog.Controllers
 
         public ActionResult AllRecipes()
         {
-            return View();
+            return RedirectToAction("Index", "Recipes");
         }
 
-        public ActionResult Recipe()
-        {
-            return View();
-        }
+       
     }
 }
