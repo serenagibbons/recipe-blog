@@ -20,6 +20,11 @@ namespace RecipesBlog.Controllers
             return View(db.Recipes.ToList());
         }
 
+        public ActionResult List()
+        {
+            return View(db.Recipes.ToList());
+        }
+
         // GET: Recipes/Details/5
         public ActionResult Details(int? id)
         {

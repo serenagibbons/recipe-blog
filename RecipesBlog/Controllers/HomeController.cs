@@ -13,7 +13,7 @@ namespace RecipesBlog.Controllers
             return View();
         }
 
-        public ActionResult AllRecipes()
+        public ActionResult Recipes()
         {
             return RedirectToAction("Index", "Recipes");
         }

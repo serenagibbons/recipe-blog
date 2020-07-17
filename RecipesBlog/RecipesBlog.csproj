@@ -129,7 +129,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Recipes1Controller.cs" />
     <Compile Include="Controllers\RecipesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -213,12 +212,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Recipes\Recipe.cshtml" />
-    <Content Include="Views\Recipes1\AllRecipes.cshtml" />
+    <Content Include="Views\Recipes\Index.cshtml" />
     <Content Include="Views\Recipes\Create.cshtml" />
     <Content Include="Views\Recipes\Delete.cshtml" />
-    <Content Include="Views\Recipes\Details.cshtml" />
     <Content Include="Views\Recipes\Edit.cshtml" />
-    <Content Include="Views\Recipes\Index.cshtml" />
+    <Content Include="Views\Recipes\List.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
