@@ -26,10 +26,10 @@
 
 @foreach (var item in Model)
 {
-    <div class="col-md-4">
-        <h2>@Html.DisplayFor(modelItem => item.Name)</h2>
-        <img class="img img-thumbnail" src="..\..\assets\lunchdinner.jpg" />
-    </div>
+<div class="col-md-4">
+    <h2>@Html.DisplayFor(modelItem => item.Name)</h2>
+    <a href="~/Recipes/Recipe/@item.Id"><img class="img img-thumbnail" src="..\..\assets\lunchdinner.jpg" /></a>
+</div>
     @*Testing the view of multiple rows of posts*@
     <div class="col-md-4">
         <h2>@Html.DisplayFor(modelItem => item.Name)</h2>

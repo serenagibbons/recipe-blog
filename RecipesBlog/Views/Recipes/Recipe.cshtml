@@ -19,13 +19,23 @@
         <div class="ingredients col-md-4">
             <h4>Ingredients</h4>
             <ul>
-                <li> @Html.DisplayFor(model => model.Ingredients)</li>
+                @{
+                    foreach (var ingredient in Model.IngredientsList)
+                    {
+                        <li>@ingredient</li>
+                    }
+                }
             </ul>
         </div>
         <div class="directions col-md-8">
             <h4>Directions</h4>
             <ol>
-                <li>@Html.DisplayFor(model => model.Ingredients)</li>
+                @{
+                    foreach (var direction in Model.DirectionsList)
+                    {
+                        <li>@direction</li>
+                    }
+                }
             </ol>
         </div>
     </div>
