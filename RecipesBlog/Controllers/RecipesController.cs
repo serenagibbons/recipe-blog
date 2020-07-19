@@ -25,22 +25,7 @@ namespace RecipesBlog.Controllers
             return View(db.Recipes.ToList());
         }
 
-        // GET: Recipes/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Recipe recipe = db.Recipes.Find(id);
-            if (recipe == null)
-            {
-                return HttpNotFound();
-            }
-            return View(recipe);
-        }
-
-        // GET: Recipes/Details/5
+        // GET: Recipes/Recipe
         public ActionResult Recipe(int? id)
         {
             if (id == null)
@@ -66,7 +51,7 @@ namespace RecipesBlog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,Ingredients,Directions,Source")] Recipe recipe)
+        public ActionResult Create([Bind(Exclude = "Id")] Recipe recipe)
         {
             if (ModelState.IsValid)
             {
