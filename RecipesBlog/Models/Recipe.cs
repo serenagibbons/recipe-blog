@@ -13,10 +13,13 @@ namespace RecipesBlog.Models
         [Required]
         public string Name { get; set; }
         [Required]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         [Required]
+        [DataType(DataType.MultilineText)]
         public string Ingredients { get; set; }
         [Required]
+        [DataType(DataType.MultilineText)]
         public string Directions { get; set; }
         public string Source { get; set; }
         public string Category { get; set; }
