@@ -9,9 +9,8 @@
 
 @foreach (var item in Model)
 {
-<div class="col-md-4">
-    <h2><a href="~/Recipes/Recipe/@item.Id" style="color: black;">@Html.DisplayFor(modelItem => item.Name)</a></h2>
-    <a href="~/Recipes/Recipe/@item.Id"><img class="img img-thumbnail" src="https://images.squarespace-cdn.com/content/v1/549367d9e4b0b0a3e2543543/1522342976601-XDY9I3MNCKVDFQCTH94Q/ke17ZwdGBToddI8pDm48kJKo3YTR7zgUvInmXMbZ6zZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0geeCvn1f36QDdcifB7yxGjTk-SMFplgtEhJ5kBshkhu5q5viBDDnY2i_eu2ZnquSA/Brownie+Cookies+%281+of+1%29.jpg?format=1500w" /></a>
-</div>
+    <div class="col-md-4">
+        <h2><a href="~/Recipes/Recipe/@item.Id" style="color: black;">@Html.DisplayFor(modelItem => item.Name)</a></h2>
+        <a href="~/Recipes/Recipe/@item.Id"><img class="img img-thumbnail" src=@item.Image_URL /></a>
+    </div>
 }
-

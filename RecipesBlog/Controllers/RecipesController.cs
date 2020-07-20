@@ -54,12 +54,12 @@ namespace RecipesBlog.Controllers
         public ActionResult Create([Bind(Exclude = "Id")] Recipe recipe)
         {
             if (ModelState.IsValid)
-            {
+            {                
                 db.Recipes.Add(recipe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+           
             return View(recipe);
         }
 
@@ -83,7 +83,7 @@ namespace RecipesBlog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Description,Ingredients,Directions,Source,Category")] Recipe recipe)
+        public ActionResult Edit([Bind(Include = "Id,Name,Description,Ingredients,Directions,Source,Category,Image_URL")] Recipe recipe)
         {
             if (ModelState.IsValid)
             {

@@ -5,7 +5,7 @@ using static System.Environment;
 
 namespace RecipesBlog.Models
 {
-    
+
     public partial class Recipe
     {
         [Required]
@@ -23,6 +23,8 @@ namespace RecipesBlog.Models
         public string Directions { get; set; }
         public string Source { get; set; }
         public string Category { get; set; }
+        [DataType(DataType.ImageUrl)]
+        public string Image_URL { get; set; }
 
         public IEnumerable<string> IngredientsList
         {
@@ -32,5 +34,6 @@ namespace RecipesBlog.Models
         {
             get { return (Directions ?? string.Empty).Split("\n\r".ToCharArray(), StringSplitOptions.RemoveEmptyEntries); }
         }
+
     }
 }
