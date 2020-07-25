@@ -217,6 +217,7 @@
     <Content Include="Views\Recipes\Delete.cshtml" />
     <Content Include="Views\Recipes\Edit.cshtml" />
     <Content Include="Views\Recipes\List.cshtml" />
+    <Content Include="Views\Recipes\Category.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -20,6 +20,7 @@ namespace RecipesBlog.Controllers
             return View(db.Recipes.ToList());
         }
 
+        // GET: Recipes table view
         public ActionResult List()
         {
             return View(db.Recipes.ToList());
@@ -127,6 +128,34 @@ namespace RecipesBlog.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        // GET: Recipes/Recipe
+        [Route("Recipes/Category/{category}")]
+        public ActionResult Category(string category)
+        {
+            if (category == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var recipes = from item in db.Recipes
+                           select item;  
+            recipes = recipes.Where(item => item.Category.Contains(category));
+
+            // set ViewBag.Name
+            switch(category)
+            {
+                case "Dessert":
+                    ViewBag.Name = "Dessert Recipes";
+                    break;
+                case "Dinner":
+                    ViewBag.Name = "Lunch and Dinner Recipes";
+                    break;
+                case "Breakfast":
+                    ViewBag.Name = "Breakfast Recipes";
+                    break;
+            }
+            return View(recipes.ToList());
         }
     }
 }

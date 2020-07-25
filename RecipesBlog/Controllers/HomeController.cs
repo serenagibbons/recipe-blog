@@ -18,6 +18,10 @@ namespace RecipesBlog.Controllers
             return RedirectToAction("Index", "Recipes");
         }
 
-       
+        public ActionResult Category(string strFilter)
+        {
+            return RedirectToAction("Category", "Recipes", new { category = strFilter} );
+        }
+
     }
 }
