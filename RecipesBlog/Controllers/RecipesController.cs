@@ -39,7 +39,7 @@ namespace RecipesBlog.Controllers
                 return HttpNotFound();
             }
             return View(recipe);
-        }
+        }       
 
         // GET: Recipes/Create
         public ActionResult Create()
@@ -131,12 +131,12 @@ namespace RecipesBlog.Controllers
         }
 
         // GET: Recipes/Recipe
-        [Route("Recipes/Category/{category}")]
+        [Route("Recipes/Category/{category?}")]
         public ActionResult Category(string category)
         {
             if (category == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("Index");
             }
             var recipes = from item in db.Recipes
                            select item;  

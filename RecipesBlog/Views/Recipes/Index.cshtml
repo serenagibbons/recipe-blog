@@ -9,8 +9,8 @@
 
 @foreach (var item in Model)
 {
-    <div class="col-md-4">
-        <h2><a href="~/Recipes/Recipe/@item.Id" style="color: black;">@Html.DisplayFor(modelItem => item.Name)</a></h2>
-        <a href="~/Recipes/Recipe/@item.Id"><img class="img img-thumbnail" src=@item.Image_URL /></a>
-    </div>
+<div class="col-md-4">
+    <h2><a href="~/Recipes/Recipe/@item.Id" style="color: black;">@Html.DisplayFor(modelItem => item.Name)</a></h2>
+    <a href="~/Recipes/Recipe/@item.Id"><img class="img img-thumbnail" src=@item.Image_URL /></a>
+</div>
 }
