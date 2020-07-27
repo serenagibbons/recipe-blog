@@ -27,6 +27,7 @@ namespace RecipesBlog.Controllers
         }
 
         // GET: Recipes/Recipe
+        [Route("Recipes/Recipe/{name?}")]
         public ActionResult Recipe(int? id)
         {
             if (id == null)
