@@ -21,6 +21,7 @@ namespace RecipesBlog.Controllers
         }
 
         // GET: Recipes table view
+        [Authorize]
         public ActionResult List()
         {
             return View(db.Recipes.ToList());
