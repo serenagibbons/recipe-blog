@@ -9,10 +9,10 @@ namespace RecipesBlog.Models
     public class Login
     {
         [Required]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Usernames must be valid email addresses")]
         public string Username { get; set; }
         [Required]
-        [MinLength(8)]
+        [MinLength(8, ErrorMessage = "Passwords must be at least 8 characters long")]
         public string Password { get; set; }
     }
 }
