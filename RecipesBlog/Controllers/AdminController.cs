@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace RecipesBlog.Controllers
@@ -20,26 +19,7 @@ namespace RecipesBlog.Controllers
             return View(db.Recipes.ToList());
         }
 
-        // GET: Recipes/Recipe
-        //[Route("Recipes/Recipe/{name?}")]
-        /*public ActionResult View(int? id)
-        {
-            return RedirectToAction("Recipe", "Recipes", );
-/*
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Recipe recipe = db.Recipes.Find(id);
-            if (recipe == null)
-            {
-                return HttpNotFound();
-            }
-            return View(recipe);
-        }*/
-
         // GET: Recipes/Create
-        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -50,7 +30,6 @@ namespace RecipesBlog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult Create([Bind(Exclude = "Id")] Recipe recipe)
         {
             if (ModelState.IsValid)
@@ -64,7 +43,6 @@ namespace RecipesBlog.Controllers
         }
 
         // GET: Recipes/Edit/5
-        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -84,7 +62,6 @@ namespace RecipesBlog.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Name,Description,Ingredients,Directions,Source,Category,Image_URL")] Recipe recipe)
         {
             if (ModelState.IsValid)
@@ -97,7 +74,6 @@ namespace RecipesBlog.Controllers
         }
 
         // GET: Recipes/Delete/5
-        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -115,7 +91,6 @@ namespace RecipesBlog.Controllers
         // POST: Recipes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Recipe recipe = db.Recipes.Find(id);
