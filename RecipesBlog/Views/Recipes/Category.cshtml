@@ -7,10 +7,12 @@
     <h1>@ViewBag.Name</h1>
 </div>
 
-@foreach (var item in Model)
-{
-<div class="col-md-4">
-    <h2>@Html.ActionLink(item.Name, "Recipe", "Recipes", new { id = item.Id, name = item.Name }, new { style = "color:black;" })</h2>
-    <a href=@Url.Action("Recipe", "Recipes", new { id = item.Id, name = item.Name })><img class="img img-thumbnail" src=@item.Image_URL /></a>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@Html.ActionLink(item.Name, "Recipe", "Recipes", new { id = item.Id, name = item.Name }, new { style = "color:black;" })</h2>
+            <a href=@Url.Action("Recipe", "Recipes", new { id = item.Id, name = item.Name })><img class="img img-thumbnail" src=@item.Image_URL /></a>
+        </div>
+    }
 </div>
-}
