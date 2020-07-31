@@ -31,6 +31,37 @@ a:hover {
     color: #E6E6FA;
     text-decoration: none;
 }
+tr td div {
+    height: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .jumbotron {
     background: #E6E6FA;
+}
+.recipe-thumbnail h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1.5em;
+}
+.recipe-thumbnail h2 a {
+    color: black;
+}
+.recipe-thumbnail h2:hover {
+    overflow: visible;
+    white-space: normal;
+}
+.recipe-thumbnail h2 ~ a img {
+    margin-bottom: 30px;
+}
+
+
+/*----------------------- Max Width 766px -----------------------*/
+
+@media screen and (max-width: 766px) {
+    .recipe-thumbnail h2 {
+        overflow: visible;
+        white-space: normal;
+    }
 }
