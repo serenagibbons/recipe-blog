@@ -22,3 +22,15 @@ select,
 textarea {
     max-width: 280px;
 }
+a {
+    color: #b1b7bd;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #E6E6FA;
+    text-decoration: none;
+}
+.jumbotron {
+    background: #E6E6FA;
+}
