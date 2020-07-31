@@ -31,6 +31,52 @@ a:hover {
     color: #E6E6FA;
     text-decoration: none;
 }
+p a {
+    color:#9686a9 ;
+}
+p a:hover {
+    color: #785b74;
+}
+tr td div {
+    height: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .jumbotron {
     background: #E6E6FA;
+}
+.btn-submit {
+    color: white;
+    background: #9686a9;
+    border: #9686a9;
+}
+.btn-submit:hover, .btn-submit:active, .btn-submit:focus, .btn-submit:disabled {
+    color: white;
+    background: #785b74;
+}
+.recipe-thumbnail h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1.5em;
+}
+.recipe-thumbnail h2 a {
+    color: black;
+}
+.recipe-thumbnail h2:hover {
+    overflow: visible;
+    white-space: normal;
+}
+.recipe-thumbnail h2 ~ a img {
+    margin-bottom: 30px;
+}
+
+
+/*----------------------- Max Width 766px -----------------------*/
+
+@media screen and (max-width: 766px) {
+    .recipe-thumbnail h2 {
+        overflow: visible;
+        white-space: normal;
+    }
 }
