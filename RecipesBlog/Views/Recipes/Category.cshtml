@@ -11,7 +11,7 @@
     @foreach (var item in Model)
     {
         <div class="col-md-4 recipe-thumbnail">
-            <h2>@Html.ActionLink(item.Name, "Recipe", "Recipes", new { id = item.Id, name = item.Name })</h2>
+            <h2>@Html.ActionLink(item.Name, "Recipe", "Recipes", new { id = item.Id, name = item.Name }, null)</h2>
             <a href=@Url.Action("Recipe", "Recipes", new { id = item.Id, name = item.Name })><img class="img img-thumbnail" src=@item.Image_URL /></a>
         </div>
     }
