@@ -10,9 +10,9 @@
 <div class="row recipes">
     @foreach (var item in Model)
     {
-        <div class="col-md-4 recipe-thumbnail">
-            <h2>@Html.ActionLink(item.Name, "Recipe", "Recipes", new { id = item.Id, name = item.Name }, null)</h2>
-            <a href=@Url.Action("Recipe", "Recipes", new { id = item.Id, name = item.Name })><img class="img-thumbnail img-fluid" src=@item.Image_URL /></a>
-        </div>
+    <div class="col-md-4 recipe-thumbnail">
+        <a href=@Url.Action("Recipe", "Recipes", new { id = item.Id, name = item.Name })><img class="img-thumbnail img-fluid" src=@item.Image_URL /></a>
+        <h2>@Html.ActionLink(item.Name, "Recipe", "Recipes", new { id = item.Id, name = item.Name }, null)</h2>
+    </div>
     } 
 </div>

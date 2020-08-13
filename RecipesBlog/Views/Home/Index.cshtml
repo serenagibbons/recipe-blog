@@ -10,16 +10,16 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4 recipe-thumbnail">
+    <div class="col-md-4 category-thumbnail">
         <h2>@Html.ActionLink("Dessert", "Category", "Recipes", new { category = "Dessert" }, null)</h2>
         <a href=@Url.Action("Category", "Recipes", new { category = "Dessert"}, null)><img class="img img-thumbnail" src="..\..\assets\dessert.jpg"/></a>
     </div>
-    <div class="col-md-4 recipe-thumbnail">
+    <div class="col-md-4 category-thumbnail">
         <h2>@Html.ActionLink("Lunch and Dinner", "Category", "Recipes", new { category = "Dinner" }, null)</h2>
         <a href=@Url.Action("Category", "Recipes", new { category = "Dinner"}, null)><img class="img img-thumbnail" src="..\..\assets\dinner.jpg"/></a>
 
     </div>
-    <div class="col-md-4 recipe-thumbnail">
+    <div class="col-md-4 category-thumbnail">
         <h2>@Html.ActionLink("Breakfast", "Category", "Recipes", new { category = "Breakfast" }, null)</h2>
         <a href=@Url.Action("Category", "Recipes", new { category = "Breakfast"}, null)><img class="img img-thumbnail" src="..\..\assets\breakfast.jpg" /></a>
     </div>
