@@ -22,6 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* General */
+.jumbotron {
+    background: #E6E6FA;
+}
 a {
     color: #b1b7bd;
     text-decoration: none;
@@ -37,14 +42,36 @@ p a {
 p a:hover {
     color: #785b74;
 }
+/* Nav bar dropdown*/
+.nav > .nav-item .dropdown {
+    display: block;
+    padding: .5rem;
+}
+.dropdown-menu {
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 0;
+    left: 0;
+    padding: 0.5rem;
+    background: #343A40;
+    border: none;
+    display: none;
+}
+browse-recipes > .dropdown-menu > .dropdown-item {
+    display: block;
+    float: left;
+    padding: .7rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+/* Table */
 tr td div {
     height: 80px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.jumbotron {
-    background: #E6E6FA;
-}
+/* Buttons */
 .btn-submit {
     color: white;
     background: #9686a9;
@@ -54,6 +81,7 @@ tr td div {
     color: white;
     background: #785b74;
 }
+/* Recipes */
 .recipe-thumbnail h2 {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -63,10 +91,10 @@ tr td div {
 .recipe-thumbnail h2 a {
     color: black;
 }
-.recipe-thumbnail h2:hover {
-    overflow: visible;
-    white-space: normal;
-}
+    .recipe-thumbnail h2:hover {
+        overflow: visible;
+        white-space: normal;
+    }
 .recipe-thumbnail h2 ~ a img {
     margin-bottom: 30px;
 }
@@ -80,3 +108,12 @@ tr td div {
         white-space: normal;
     }
 }
+/*
+@media screen and (min-width: 775px) {
+    .browse-recipes:hover .dropdown-menu {
+        display: block;
+    }
+    .browse-recipes .dropdown-menu:hover {
+        display: block;
+    }
+}*/

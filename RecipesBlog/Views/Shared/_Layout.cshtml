@@ -13,10 +13,26 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-                @Html.ActionLink("Serena's Favorite Recipes", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Serena's Favorite Recipes", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <div class="navbar-collapse collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item">@Html.ActionLink("Browse Recipes", "Recipes", "Home", new { @class = "nav-link" }, null)</li>
+                    <li class="nav-item dropdown browse-recipes">
+                        <a href="#" class="nav-link" data-toggle="dropdown">Browse Recipes</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("View All", "Recipes", "Home", new { @class = "nav-link dropdown-item", role = "button", aria_expanded = "false" }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Desserts", "Category", "Recipes", new { @class = "nav-link dropdown-item", category = "Dessert", role = "button", aria_expanded = "false" }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Lunch and Dinner", "Category", "Recipes", new { @class = "nav-link dropdown-item", category = "Dinner", role = "button", aria_expanded = "false" }, null)
+                            </li>
+                            <li>
+                                @Html.ActionLink("Breakfast", "Category", "Recipes", new { @class = "nav-link dropdown-item", category = "Breakfast", role = "button", aria_expanded = "false" }, null)
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
