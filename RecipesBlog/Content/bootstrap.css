@@ -4417,7 +4417,7 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-.navbar-toggler:hover, .navbar-toggler:focus {
+.navbar-toggler:hover, .navbar-toggler:focus {.navbar-brand
   text-decoration: none;
 }
 

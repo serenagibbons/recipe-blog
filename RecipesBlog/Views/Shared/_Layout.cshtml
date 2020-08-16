@@ -34,6 +34,11 @@
                         </ul>
                     </li>
                 </ul>
+                @using (Html.BeginForm("Index", "Recipes", FormMethod.Get, new { @class = "form-inline my-2 my-lg-0 search-container" }))
+                {
+                    @Html.Editor("search", new { HtmlAttributes = new { @class = "form-control mr-sm-2", type = "search", placeholder = "Search...", aria_label = "Search" } })
+                    <button id="btn-search" class="btn btn-outline-search my-2 my-sm-0" type="submit">Search</button>
+                }
             </div>
         </div>
     </div>
