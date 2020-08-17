@@ -14,12 +14,20 @@ namespace RecipesBlog.Controllers
         // GET: Recipes
         public ActionResult Index(string search)
         {
+            ViewBag.Name = "Recipes";
+
             var recipes = from item in db.Recipes
                           select item;
+
             // add search bar functionality
             if (!string.IsNullOrEmpty(search))
             {
                 recipes = recipes.Where(item => item.Name.Contains(search) || item.Description.Contains(search));
+                ViewBag.Name = $"{char.ToUpper(search[0]) + search.Substring(1)} Recipes";
+                if (recipes.Count() == 0)
+                {
+                    ViewBag.Name = $"No results for \"{search}\" recipes";
+                }
             }
             return View(recipes.ToList());
         }
