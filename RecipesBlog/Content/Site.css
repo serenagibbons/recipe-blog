@@ -119,14 +119,6 @@ tr td div {
             color: white;
         }
 
-/* Category thumbnail */
-.category-thumbnail {
-    margin-bottom: 1.5em;
-}
-.category-thumbnail h2 {
-    line-height: 1.5em;
-}
-
 /* Recipes */
 .recipe-thumbnail {
     margin-bottom: 1.5em;

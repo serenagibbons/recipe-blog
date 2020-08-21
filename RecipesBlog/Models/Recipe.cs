@@ -34,6 +34,5 @@ namespace RecipesBlog.Models
         {
             get { return (Directions ?? string.Empty).Split("\n\r".ToCharArray(), StringSplitOptions.RemoveEmptyEntries); }
         }
-
     }
 }
