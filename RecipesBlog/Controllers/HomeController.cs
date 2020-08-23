@@ -9,8 +9,6 @@ namespace RecipesBlog.Controllers
 {
     public class HomeController : Controller
     {
-        private static RecipesDBEntities db = new RecipesDBEntities();
-
         public ActionResult Index()
         {
             return View();
@@ -28,6 +26,8 @@ namespace RecipesBlog.Controllers
 
         public static Recipe GetRecipe(int? id)
         {
+            RecipesDBEntities db = new RecipesDBEntities();
+
             // find recipe by id
             var recipes = from item in db.Recipes
                           where id == item.Id

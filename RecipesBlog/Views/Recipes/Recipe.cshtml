@@ -17,33 +17,39 @@
             <hr />
         </div>
         <div class="row">
-        <div class="ingredients col-md-4">
-            <h4>Ingredients</h4>
-            <ul>
-                @{
-                    foreach (var ingredient in Model.IngredientsList)
-                    {
-                        <li>@ingredient</li>
+            <div class="ingredients col-md-4">
+                <h4>Ingredients</h4>
+                <ul>
+                    @{
+                        foreach (var ingredient in Model.IngredientsList)
+                        {
+                            <li>@ingredient</li>
+                        }
                     }
-                }
-            </ul>
-        </div>
-        <div class="directions col-md-8">
-            <h4>Directions</h4>
-            <ol>
-                @{
-                    foreach (var direction in Model.DirectionsList)
-                    {
-                        <li>@direction</li>
-                    }
-                }
-            </ol>
-        </div>
+                </ul>
             </div>
+            <div class="directions col-md-8">
+                <h4>Directions</h4>
+                <ol>
+                    @{
+                        foreach (var direction in Model.DirectionsList)
+                        {
+                            <li>@direction</li>
+                        }
+                    }
+                </ol>
+            </div>
+        </div>
     </div>
     <div class="col-md-4 text-right">
         <img class="img img-thumbnail img-fluid" src=@Model.Image_URL />
     </div>
+    <div class="col-md-12">
+        <span class="description">
+            Source: @Model.Source
+        </span>
+    </div>
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", "Admin", new { id = Model.Id }, null) |
